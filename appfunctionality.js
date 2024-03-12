@@ -1,5 +1,5 @@
 const sections = document.querySelectorAll('.section');
-const controls = document.querySelectorAll('.controls');
+const controls = document.querySelector('.controls');
 const buttons  = document.querySelectorAll('.control');
 const allSections= document.querySelector('.maincontent');
 const darkthemebtn = document.querySelector('.darkthemebtn');
@@ -9,16 +9,14 @@ const light_themebtn = document.querySelector('.lightthemebtn');
 function pageTransitions(){
       for(let i=0; i <buttons.length; i++){
         buttons[i].addEventListener('click', function(){
-            let currentBtn = document.querySelectorAll('.active-btn');
+            let currentBtn = document.querySelector('.active-btn');
             currentBtn[0].className = currentBtn[0].className.replace(' active-btn', '');
             this.className += ' active-btn';
-            
              })
         }
-      allSections.addEventListener('click', (e)=>{
+        sections.addEventListener('click', (e)=>{
          const id= e.target.dataset.id;
          if(id){
-            
             sections.forEach((section)=>{
                section.classList.remove('active');
             })  
