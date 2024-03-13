@@ -208,6 +208,9 @@ body{
 .item-content:hover{
     cursor: pointer;
 }
+.more{
+    display: none;
+}
 /*poems section */
 .poem_items{
     display: grid;
@@ -236,7 +239,6 @@ body{
     cursor: pointer;
 }
 
-/*poems section */
 
 
 @import './_media.css'

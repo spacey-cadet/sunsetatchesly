@@ -59,25 +59,42 @@ function formatPage(elementid){
          if(elementid == '#article'){
             console.log('article found....')
             //split at any whitespace and return an array of substrings
-            let wordcount = data.split('/\s+/').length()
+            let wordcount = data.split(/\s+/).length
+            console.log(wordcount)
             if(wordcount > 100){
                let readmorebtn = document.createElement('button')
                readmorebtn.className = 'readmore'
+               readmorebtn.textContent = "Read more"
+              
+
                let newspan = document.createElement('span')
                newspan.className = 'more'
-               newspan.innerHTML = data.split('/\s+/').slice(100).join(' ')
-               element.innerHTML =+ data.split('/\s+/').slice(0,100).join(' ')
-               element.innerHTML += readmorebtn
+               newspan.textContent = data.split(/\s+/).slice(100).join(' ')
+
+               element.innerHTML =data.split(/\s+/).slice(0,100).join(' ')
+               element.appendChild(readmorebtn)
+               element.appendChild(newspan)
+
+               readmorebtn.addEventListener('click', function(){
+                  if(readmorebtn.textContent == "Read more"){
+                     newspan.style.display = 'inline'
+                     readmorebtn.textContent = "Show less"
+                     element.appendChild(newspan)
+                     element.appendChild(readmorebtn)
+                  }
+                 else{
+                     newspan.style.display = "none"
+                     readmorebtn.textContent = "Read more"
+                     element.appendChild(readmorebtn)
+                 }
+            })
                console.log('formatting article....')
             }
          } 
       }
-
-
-   })
-   
+   }) 
 }
 
 pageTransitions();
 formatPage('#poem')
-formatPage('#newtext')
+formatPage('#article')
