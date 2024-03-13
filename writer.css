@@ -6,6 +6,7 @@
 }
 body{
     display: flex;
+    background-color: rgb(236, 253, 243);
 }
 button{
     border:0px;
@@ -18,11 +19,17 @@ button{
     position: relative;
     top: 20%;
     left: 30%;
+    gap: 1rem;
+    border: 1px silid black;
+    background-color: inherit;
 }
 .form{
+    display: flex;
+    flex-direction: column;
     position: absolute;
     transform: translateY(0) scale(1);
     transition: all 2s ease-in-out;
+    top: 10%;
 }
 
 .articles-form{
