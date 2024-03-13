@@ -188,7 +188,7 @@ body{
 .otheritems{
     display: grid;
     grid-gap:5rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     position:relative;
     color: var(--color-primary);
     padding:2rem !important;
@@ -200,7 +200,6 @@ body{
     padding:.4rem !important;
     object-fit: contain;
     color: var(--color-primary);
-    width: 420px;
 }
 
 .text:hover{

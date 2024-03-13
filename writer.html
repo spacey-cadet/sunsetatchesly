@@ -6,18 +6,18 @@
     <link rel="stylesheet" href="writer.css"/>
   </head>
 
-  <body>
+  <body class="mainwriter">
     <div class="selectors">
-        <button class="select " data-id="articles">Articles</button>
-        <button class="select" data-id="poems">Poems</button>
+        <button class="select on" data-id="article">Articles</button>
+        <button class="select" data-id="poem" >Poems</button>
     </div>
    <section class="editor">
-        <form class="articles-form form curr" id="articles">
-            <textarea rows="4" cols="50" id="article"></textarea>
+        <form class="articles-form form curr" id="article">
+            <textarea rows="20" cols="100" placeholder="Paste your article here"></textarea>
             <button onclick="injectDOMElement('article', 'poems_text')">Post</button>
         </form>
-        <form class="poems-form form" id="poems" >
-            <textarea rows="4" cols="100" id="poem"></textarea>
+        <form class="poems-form form" id="poem" >
+            <textarea rows="20" cols="100"  placeholder="Paste your poem here"></textarea>
             <button onclick="injectDOMElement('poem' , 'newitem')">Post</button>
         </form>
    </section>

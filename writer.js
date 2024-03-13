@@ -1,10 +1,10 @@
-const selectors =document.querySelector('selectors')
-const selector = document.querySelectorAll('select')
-const editor = document.querySelector('editor')
-const forms = document.querySelectorAll('form')
+const selectors =document.querySelector('.selectors')
+const selector = document.querySelectorAll('.select')
+const editor = document.querySelector('.mainwriter')
+const forms = document.querySelectorAll('.form')
 
 function selectAction (){
-    editor.addEventListener('click', (e)=>{
+    editor.addEventListener('DOMContentLoaded', (e)=>{
         const id = e.target.dataset.id
         if(id){
             forms.forEach((form)=>{
@@ -25,4 +25,3 @@ function injectDOMELement(formid, elementid){
     element.appendChild(articeEl)
 
 }
-selectAction()
