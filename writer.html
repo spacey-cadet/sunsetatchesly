@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>sunsetatchesly writers</title>
+    <link rel="stylesheet" href="writer.css"/>
+  </head>
+
+  <body>
+    <div class="selectors">
+        <button class="select " data-id="articles">Articles</button>
+        <button class="select" data-id="poems">Poems</button>
+    </div>
+   <section class="editor">
+        <form class="articles-form form curr" id="articles">
+            <textarea rows="4" cols="50" id="article"></textarea>
+            <button onclick="injectDOMElement('article', 'poems_text')">Post</button>
+        </form>
+        <form class="poems-form form" id="poems" >
+            <textarea rows="4" cols="50" id="poem"></textarea>
+            <button onclick="injectDOMElement('poem' , 'newitem')">Post</button>
+        </form>
+   </section>
+    
+    <script src="writer.js"></script>
+  </body>
+</html>
